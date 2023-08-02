@@ -1,6 +1,6 @@
 
 const staticDevCoffee = "Weather App";
-const assets = ["/", "/index.html", "/Weather.js", "/img/clouds.png"];
+const assets = ["/", "/index.html", "/Weather.js", "/images/clouds.png"];
 
 self.addEventListener('install',async e =>{
   const cache = await caches.open(staticDevCoffee);

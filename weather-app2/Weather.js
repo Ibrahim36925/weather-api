@@ -13,7 +13,7 @@ if ("serviceWorker" in navigator) {
         navigator.serviceWorker.ready.then((registration) => {
           registration.showNotification("Weather Notification", {
             body: "Notification from Weather",
-            icon: "./img/clouds.png",
+            icon: "./images/clouds.png",
             vibrate: [200, 100, 200, 100, 200, 100, 200],
             tag: "vibration-sample",
           });
@@ -56,7 +56,7 @@ async function fetchDataOnload() {
                 <h4>${data1.name}<br>${data1.sys.country}</h4>
                 <p class="date">${today.slice(0, 3)}, ${currentMonth} ${currentDate}</p>`
            if(data1.weather[0].main === "Clouds"){
-            data1.weather[0].icon = "img/clouds.png";
+            data1.weather[0].icon = "images/clouds.png";
            }
            else if (data1.weather[0].main === "Clear"){
             data1.weather[0].icon = "img/cloudy.png";
@@ -72,6 +72,9 @@ async function fetchDataOnload() {
            }
            else if (data1.weather[0].main === "Smoke"){
             data1.weather[0].icon = "img/smoke.png";
+           }
+           else if (data1.weather[0].main === "Haze"){
+            data1.weather[0].icon = "img/haze.png";
            }
 
          abc.innerHTML += `
@@ -106,7 +109,7 @@ async function fetchDataOnload() {
          </div>
          <div class="one">
          <div class="img_weather">
-         <img src="img/clouds.png">
+         <img src="images/clouds.png">
          <span>Clouds</span>
          </div>
          <div class="calculate">
@@ -144,7 +147,7 @@ async function onSearch() {
                 <h4>${data2.name}<br>${data2.sys.country}</h4>
                 <p class="date">${today.slice(0, 3)}, ${currentMonth} ${currentDate}</p>`
                 if(data2.weather[0].main === "Clouds"){
-                    data2.weather[0].icon = "img/clouds.png";
+                    data2.weather[0].icon = "images/clouds.png";
                    }
                    else if (data2.weather[0].main === "Clear"){
                     data2.weather[0].icon = "img/cloudy.png";
@@ -160,6 +163,9 @@ async function onSearch() {
                    }
                    else if (data2.weather[0].main === "Smoke"){
                     data2.weather[0].icon = "img/smoke.png";
+                   }
+                   else if (data2.weather[0].main === "Haze"){
+                    data2.weather[0].icon = "img/haze.png";
                    }
           abc.innerHTML += `
                 <div class="weather_temp">
@@ -192,7 +198,7 @@ async function onSearch() {
                 </div>
                 <div class="one">
                 <div class="img_weather">
-                <img src="img/clouds.png">
+                <img src="images/clouds.png">
                 <span>Clouds</span>
                 </div>
                 <div class="calculate">
@@ -241,7 +247,7 @@ window.onkeydown = function KeyonSearch() {
                 <h4>${data2.name}<br>${data2.sys.country}</h4>
                 <p class="date">${today.slice(0, 3)}, ${currentMonth} ${currentDate}</p>`
                 if(data2.weather[0].main === "Clouds"){
-                    data2.weather[0].icon = "img/clouds.png";
+                    data2.weather[0].icon = "images/clouds.png";
                    }
                    else if (data2.weather[0].main === "Clear"){
                     data2.weather[0].icon = "img/cloudy.png";
@@ -257,6 +263,9 @@ window.onkeydown = function KeyonSearch() {
                    }
                    else if (data2.weather[0].main === "Smoke"){
                     data2.weather[0].icon = "img/smoke.png";
+                   }
+                   else if (data2.weather[0].main === "Haze"){
+                    data2.weather[0].icon = "img/haze.png";
                    }
             abc.innerHTML += `
                 <div class="weather_temp">
@@ -289,7 +298,7 @@ window.onkeydown = function KeyonSearch() {
                 </div>
                 <div class="one">
                 <div class="img_weather">
-                <img src="img/clouds.png">
+                <img src="images/clouds.png">
                 <span>Clouds</span>
                 </div>
                 <div class="calculate">

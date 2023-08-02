@@ -1,7 +1,5 @@
-
-
 body {
-    background-image: url("https://css-tricks.com/wp-content/uploads/2017/09/linear-gradient.png");
+    background-image: url("img/linear-gradient.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -216,7 +214,9 @@ sup {
 }
 
 @media screen and (max-width:600px) {
-    
+  body{
+    height: auto;
+  }
     .app_wrapper {
         width: 55%;
     }
@@ -230,12 +230,17 @@ sup {
         width: 80%;
         border: none;
     }
-    
+    body{
+        height :auto;
+    }
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:300px) {
     .app_wrapper {
         width: 85%;
+    }
+    body{
+        height :auto;
     }
     
 }
